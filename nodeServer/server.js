@@ -2,6 +2,7 @@ const http = require('http');
 const fs = require('fs')
 const port = 3000
 
+//If the file is not installed or placed into the incorrect directory, you may get this error.
 const server = http.createServer(function(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' })
     fs.readFile('index.HTML', function(error, data) {
